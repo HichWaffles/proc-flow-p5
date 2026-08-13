@@ -163,7 +163,7 @@ const numParticles = 1500;
 const particles = [];
 let grid;
 const boundaries = [];
-const numBoundaries = 1;
+const numBoundaries = 0;
 
 function setup() {
     createCanvas(700, 700);
