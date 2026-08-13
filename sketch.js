@@ -1,5 +1,6 @@
 class Particle {
     constructor(x, y) {
+        this.originalPosition = createVector(x, y);
         this.position = createVector(x, y);
         this.color = Particle.generateColor();
         this.velocity = createVector(0, 0);
@@ -9,6 +10,11 @@ class Particle {
         const potential = grid._potential(this.position, grid.time);
         this.velocity = potential;
         this.position.add(potential.mult(deltaTime * 10));
+
+        const center = createVector(width / 2, height / 2);
+        if (this.position.dist(center) > Math.max(width, height) * 0.7) {
+            this.position = this.originalPosition.copy();
+        }
     }
 
     render() {
