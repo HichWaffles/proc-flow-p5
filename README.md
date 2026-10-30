@@ -1,6 +1,6 @@
 # Procedural Fluid Flow
 
-[**Visit the Live Showcase**](https://hichwaffles.github.io/proc-fluid-sim-p5/)
+[**Visit the Live Showcase**](https://hichwaffles.github.io/proc-flow-p5/)
 
 This project implements a procedural fluid flow simulation based on curl noise.
 
